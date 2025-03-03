@@ -1,0 +1,114 @@
+:root {
+    /* Colores de la interfaz */
+    --color-fondo-general: #f0f0f0; /* Fondo general */
+    --color-principal: #6200ea; /* Morado claro para elementos principales */
+    --color-secundario: #03dac6; /* Verde aqua para efectos secundarios */
+    --color-texto: #333333; /* Texto principal */
+    --color-fondo-input: #ffffff; /* Fondo blanco para los inputs */
+    --color-boton: #6200ea; /* Color de fondo del botón */
+    --color-boton-hover: #3700b3; /* Color del botón al pasar el mouse */
+    --color-boton-texto: #ffffff; /* Color del texto del botón */
+    --color-focus: #03dac6; /* Color de foco */
+    --color-boton-active: #3700b3; /* Color activo del botón */
+}
+
+/* Restablecer márgenes y relleno globalmente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-fondo-general);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#registrousuario {
+    background-color: var(--color-fondo-input);
+    border-radius: 12px;
+    width: 700px; /* Aumentar el tamaño del formulario */
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+#registrousuario legend {
+    background-color: var(--color-principal);
+    color: var(--color-boton-texto);
+    font-size: 24px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#registrousuario label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 16px;
+    color: var(--color-texto);
+}
+
+#registrousuario input[type="text"], 
+#registrousuario input[type="password"], 
+#registrousuario input[type="email"], 
+#registrousuario input[type="date"], 
+#registrousuario textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--color-fondo-input);
+    color: var(--color-texto);
+    transition: all 0.3s ease;
+}
+
+#registrousuario input[type="text"]:focus, 
+#registrousuario input[type="password"]:focus, 
+#registrousuario input[type="email"]:focus, 
+#registrousuario input[type="date"]:focus, 
+#registrousuario textarea:focus {
+    border-color: var(--color-focus);
+    outline: none;
+    box-shadow: 0 0 8px rgba(3, 218, 198, 0.5);
+}
+
+#registrousuario input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#registrousuario input[type="submit"]:hover {
+    background-color: var(--color-boton-hover);
+    transform: scale(1.05);
+}
+
+#registrousuario input[type="submit"]:active {
+    background-color: var(--color-boton-active);
+    transform: scale(0.98);
+}
+
+#registrousuario textarea {
+    height: 120px; /* Mejorar el tamaño del área de texto */
+}
+
+@media (max-width: 768px) {
+    #registrousuario {
+        width: 90%; /* Formularios más pequeños en pantallas pequeñas */
+        padding: 20px;
+    }
+}
